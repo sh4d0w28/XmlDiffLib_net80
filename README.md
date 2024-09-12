@@ -1,5 +1,8 @@
 # XmlDiffLib
 
+ORIGINAL REPOSITORY: https://github.com/BrutalSimplicity/XmlDiffLib
+I ONLY UPGRADED SOLUTION TO Net80. CORE LOGIC IS UNCHANGED!
+
 Use this library to find the differences between two Xml files. You can also clone this repo and build it to use the console application that makes use of this library.
 
 # How to use
