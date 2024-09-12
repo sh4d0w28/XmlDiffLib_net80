@@ -5,13 +5,32 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>XmlDiffLib</Title>
-    <Company>OrangeLogic</Company>
+    <Title>XmlDiffLib_net80</Title>
+    <Company></Company>
     <Description>Finds the differences between two xml files.</Description>
     <Copyright>Copyright 2016</Copyright>
     <PackageReleaseNotes>Upgraded original lib to net80</PackageReleaseNotes>
     <PackAsTool>False</PackAsTool>
     <Authors>Kory Taborn, Maksim Edush</Authors>
+    <PackageId>sh4d0w28.$(AssemblyName)</PackageId>
+    <RepositoryUrl>https://github.com/sh4d0w28/XmlDiffLib_net80</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>xml;net80;diff</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/sh4d0w28/XmlDiffLib_net80</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Version>1.0.2</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

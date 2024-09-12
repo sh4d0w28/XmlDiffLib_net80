@@ -10,7 +10,7 @@ Use this library to find the differences between two Xml files. You can also clo
 You can install the library as a nuget package using the nuget command line tool, or in Visual Studio, the Nuget Package Manager.
 
 ```
-nuget install XmlDiffLib
+nuget install sh4d0w28.XmlDiffLib
 ```
 
 ## Sample
