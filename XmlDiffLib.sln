@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDiffLib", "XmlDiffLib\XmlDiffLib.csproj", "{6C6D8988-7827-4E86-91F8-CB3FC3C069EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDiffLib.Tests", "XmlDiffLib.Tests\XmlDiffLib.Tests.csproj", "{F1407E5B-6758-45C1-86A8-47BCD263C139}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C6D8988-7827-4E86-91F8-CB3FC3C069EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6D8988-7827-4E86-91F8-CB3FC3C069EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6D8988-7827-4E86-91F8-CB3FC3C069EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6D8988-7827-4E86-91F8-CB3FC3C069EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1407E5B-6758-45C1-86A8-47BCD263C139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1407E5B-6758-45C1-86A8-47BCD263C139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1407E5B-6758-45C1-86A8-47BCD263C139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1407E5B-6758-45C1-86A8-47BCD263C139}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DF0EF35-EA4A-4610-8F48-061E8B2C099C}
+	EndGlobalSection
+EndGlobal

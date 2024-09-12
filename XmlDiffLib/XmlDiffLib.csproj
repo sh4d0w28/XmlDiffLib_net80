@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>XmlDiffLib</Title>
+    <Company>OrangeLogic</Company>
+    <Description>Finds the differences between two xml files.</Description>
+    <Copyright>Copyright 2016</Copyright>
+    <PackageReleaseNotes>Upgraded original lib to net80</PackageReleaseNotes>
+    <PackAsTool>False</PackAsTool>
+    <Authors>Kory Taborn, Maksim Edush</Authors>
+  </PropertyGroup>
+
+</Project>
