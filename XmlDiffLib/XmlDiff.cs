@@ -10,11 +10,12 @@ namespace XmlDiffLib
         public enum DiffTypes { Removed, Added, Changed }
         public enum DiffNodeTypes { Tag, Text, Attribute, Node }
 
+        public string? InnerXml { get; set; }
         public DiffNodeTypes DiffNodeType { get; set; }
         public DiffTypes DiffType { get; set; }
         public string Origin { get; set; }
         public string Comparison { get; set; }
-        public string XPath { get; set; }
+        public string? XPath { get; set; }
         public string Description { get; set; }
         public int OriginLineNo { get; set; }
         public int CompLineNo { get; set; }
@@ -39,6 +40,7 @@ namespace XmlDiffLib
         public bool MatchValueTypes { get; set; }
         public bool TwoWayMatch { get; set; }
         public int MaxAttributesToDisplay { get; set; }
+        public bool AddInnerXmlWhenNodeAdded { get; set; }
         public HashSet<IgnoreTextNodeOptions> IgnoreTextTypes { get; set; }
 
         public XmlDiffOptions()
@@ -54,6 +56,7 @@ namespace XmlDiffLib
             MatchDescendants = true;
             MatchValueTypes = true;
             TwoWayMatch = false;
+            AddInnerXmlWhenNodeAdded = false;
             IgnoreNodes = new HashSet<XPathNodeType>();
             IgnoreTextTypes = new HashSet<IgnoreTextNodeOptions>();
             MaxAttributesToDisplay = -1;
@@ -99,6 +102,20 @@ namespace XmlDiffLib
                     List<XmlDiffNode> tempNodeList = CompareNodes(xmlToDoc.CreateNavigator(), xmlFromDoc.CreateNavigator());
                     DiffNodeList.AddRange(tempNodeList.Where((node) => node.DiffType == XmlDiffNode.DiffTypes.Removed)
                                                       .Select((node) => { node.DiffType = XmlDiffNode.DiffTypes.Added; return node; }));
+                }
+                if (options.AddInnerXmlWhenNodeAdded)
+                {
+                    DiffNodeList.ForEach((node) =>
+                    {
+                        if (node.DiffType == XmlDiffNode.DiffTypes.Removed)
+                        {
+                            node.InnerXml = null;
+                        }
+                    });
+                }
+                else
+                {
+                    DiffNodeList.ForEach((node) => node.InnerXml = null);
                 }
             }
             catch (Exception ex)
@@ -305,6 +322,7 @@ namespace XmlDiffLib
                         {
                             diffNodeList.Add(new XmlDiffNode
                             {
+                                InnerXml = xFrom.InnerXml,
                                 XPath = GetXPath(xFrom),
                                 DiffType = XmlDiffNode.DiffTypes.Removed,
                                 Description = "Node children not found",
@@ -335,6 +353,7 @@ namespace XmlDiffLib
                         {
                             diffNodeList.Add(new XmlDiffNode
                             {
+                                InnerXml = xFrom.InnerXml,
                                 XPath = GetXPath(xFrom),
                                 DiffType = XmlDiffNode.DiffTypes.Removed,
                                 Description = "No matching node found.",
@@ -358,6 +377,7 @@ namespace XmlDiffLib
                             nodeInfo.DiffNodeType = XmlDiffNode.DiffNodeTypes.Node;
                             diffNodeList.Add(new XmlDiffNode
                             {
+                                InnerXml = xFrom.InnerXml,
                                 XPath = GetXPath(xFrom),
                                 DiffType = XmlDiffNode.DiffTypes.Removed,
                                 Description = "Node not found",
@@ -376,6 +396,7 @@ namespace XmlDiffLib
                         {
                             diffNodeList.Add(new XmlDiffNode
                             {
+                                InnerXml = xFrom.InnerXml,
                                 XPath = GetXPath(xFrom),
                                 DiffType = XmlDiffNode.DiffTypes.Removed,
                                 Description = "Node not found",
