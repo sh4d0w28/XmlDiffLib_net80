@@ -177,3 +177,6 @@ diff.CompareDocuments(new XmlDiffOptions()
       ]
 }
 ```
+
+#### 1.0.3 changes:
+- added option `AddInnerXmlWhenNodeAdded`. It will add innerXml of the appended node. Set to false to disable innerXml display

@@ -19,7 +19,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/sh4d0w28/XmlDiffLib_net80</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
